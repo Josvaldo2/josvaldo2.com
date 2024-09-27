@@ -1,34 +1,71 @@
 body {
-    text-align: center;
+    font-size: 16px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
-    margin: auto;
-    width: 50vw;
-    background-image: linear-gradient(160deg, #292929, #6464ff);
+    text-align: center;
     min-height: 100vh;
+    margin: 20px;
+    padding: 5px;
+
+    background-image: url("checkers.png");
+    background-size: 10vmax;
+    background-repeat: repeat;
+    image-rendering: pixelated;
+    animation: linear 18s infinite background;
+    /*background-attachment: fixed;*/
 }
 
-#box {
-    background-color: rgba(160, 160, 160, 0.459);
-    border: 4px #00000075  solid;
-    border-radius: 50px;
-    width: min-content;
+#main-container {
+    width: 90vw;
+    max-width: 600px;
     margin: auto;
+}
 
+#logo {
+    width: 300px;
+    max-width: 80vw;
     transform: rotate3d(0, 1, 0.5, 0deg);
     animation: linear 6s infinite rotation;
 }
 
-#optimus {
-    height: 55vh;
+h1:hover, h2:hover {
+    transform: scale(1.1, 1.1);
+    transition: linear 0.1s transform;
+}
+
+.box {
+    background-color: #00000072;
+    border: white 3px solid;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: black 0px 0px 15px;
+}
+
+.shadow {
+	text-shadow: black 0px 0px 15px;
+}
+
+.margin {
+    margin: 20px
+}
+
+@keyframes background {
+    from {
+        background-position: 0vmax 0vmax;
+    }
+
+    to {
+        background-position: 50vmax 50vmax;
+    }
 }
 
 @keyframes rotation {
     from {
-        transform: rotate3d(0, 1, 0.5, 0deg);
+        transform: rotate3d(0, 1, 0.2, 0deg);
     }
 
     to {
         transform: rotate3d(0, 1, 0.2, 360deg);
     }
 }
+
